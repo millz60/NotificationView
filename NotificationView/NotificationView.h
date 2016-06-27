@@ -11,6 +11,6 @@
 @interface NotificationView : UIView
 
 
--(instancetype) init;
+-(instancetype) initWithFrame:(CGRect)frame;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "NotificationView.h"
+#import "ViewController.h"
 
 @implementation NotificationView
 {
@@ -14,9 +15,9 @@
 }
 
 
--(instancetype) init {
+-(instancetype) initWithFrame:(CGRect)frame {
     
-    self = [super init];
+    self = [super initWithFrame:frame];
     [self setup];
     return self;
     
@@ -25,16 +26,22 @@
 -(void) setup{
     
     UIView *notificationView = [[UIView alloc] init];
-    notificationView.frame = CGRectMake(0, 0, 250, 250);
+    notificationView.frame = CGRectMake(0, 0, super.frame.size.width, super.frame.size.height);
     notificationView.backgroundColor = [UIColor orangeColor];
     
+    UIImageView *notifyBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"notify.png"]];
+    notifyBackground.frame = CGRectMake(0,0,notificationView.frame.size.width, notificationView.frame.size.height);
     
-    UILabel *viewTitle = [[UILabel alloc] initWithFrame:CGRectMake((250/2)-100, (250/2)-15, 200, 30)];
+    
+    
+    UILabel *viewTitle = [[UILabel alloc] init];
+    viewTitle.frame = CGRectMake((notificationView.frame.size.width)/2 - 75, (notificationView.frame.size.height)/2 - 75, 150, 150);
     viewTitle.text = @"Notification View";
     viewTitle.textAlignment = NSTextAlignmentCenter;
     viewTitle.textColor = [UIColor whiteColor];
     
     [notificationView addSubview:viewTitle];
+    [notificationView addSubview:notifyBackground];
     [self addSubview:notificationView];
     
 }

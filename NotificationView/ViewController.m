@@ -20,8 +20,7 @@
     
     screenHeight = self.view.frame.size.height;
     screenWidth = self.view.frame.size.width;
-    newView = [[NotificationView alloc] init];
-    newView.frame = CGRectMake((screenWidth/2)-125, 100, 250, 250);
+    newView = [[NotificationView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
     
     [self.view addSubview:newView];
     
@@ -39,18 +38,16 @@
 
 
 -(void) upSwipe: (UIGestureRecognizer *) recognizer{
-    [UIView animateWithDuration:1.0 animations:^{ newView.frame = CGRectMake((screenWidth/2)-125, (screenHeight/2)-200, 250, 250); }];
-    
+    [UIView animateWithDuration:1.0 animations:^{ newView.frame = CGRectMake(0, -(screenHeight), screenWidth, screenHeight); }];
 }
 
 -(void) downSwipe: (UIGestureRecognizer *) recognizer{
-    [UIView animateWithDuration:1.0 animations:^{ newView.frame = CGRectMake((screenWidth/2)-125, (screenHeight/2)+100, 250, 250); }];
-    
+    [UIView animateWithDuration:1.0 animations:^{ newView.frame = CGRectMake(0, 0, screenWidth, screenHeight); }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end
