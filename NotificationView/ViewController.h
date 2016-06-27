@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NotificationView.h"
 
 @interface ViewController : UIViewController
-
+{
+    NSInteger screenHeight;
+    NSInteger screenWidth;
+    NotificationView *newView;
+}
 
 @end
 

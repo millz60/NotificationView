@@ -13,6 +13,7 @@
 		C9BA7CE41D218DEA00B3C231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BA7CE21D218DEA00B3C231 /* Main.storyboard */; };
 		C9BA7CE61D218DEA00B3C231 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9BA7CE51D218DEA00B3C231 /* Assets.xcassets */; };
 		C9BA7CE91D218DEA00B3C231 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BA7CE71D218DEA00B3C231 /* LaunchScreen.storyboard */; };
+		C9BA7CF51D218ED200B3C231 /* NotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BA7CF41D218ED200B3C231 /* NotificationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		C9BA7CE51D218DEA00B3C231 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9BA7CE81D218DEA00B3C231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9BA7CEA1D218DEA00B3C231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9BA7CF31D218ED200B3C231 /* NotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationView.h; sourceTree = "<group>"; };
+		C9BA7CF41D218ED200B3C231 /* NotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				C9BA7CE71D218DEA00B3C231 /* LaunchScreen.storyboard */,
 				C9BA7CEA1D218DEA00B3C231 /* Info.plist */,
 				C9BA7CD91D218DEA00B3C231 /* Supporting Files */,
+				C9BA7CF31D218ED200B3C231 /* NotificationView.h */,
+				C9BA7CF41D218ED200B3C231 /* NotificationView.m */,
 			);
 			path = NotificationView;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				C9BA7CE11D218DEA00B3C231 /* ViewController.m in Sources */,
 				C9BA7CDE1D218DEA00B3C231 /* AppDelegate.m in Sources */,
 				C9BA7CDB1D218DEA00B3C231 /* main.m in Sources */,
+				C9BA7CF51D218ED200B3C231 /* NotificationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = NotificationView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theironyard.houston.NotificationView;
@@ -276,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = NotificationView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theironyard.houston.NotificationView;

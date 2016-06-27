@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NotificationView.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    screenHeight = self.view.frame.size.height;
+    screenWidth = self.view.frame.size.width;
+    newView = [[NotificationView alloc] init];
+    newView.frame = CGRectMake((screenWidth/2)-125, 100, 250, 250);
+    
+    [self.view addSubview:newView];
+    
+    UISwipeGestureRecognizer *downSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(downSwipe:)];
+    downSwipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
+    
+    UISwipeGestureRecognizer *upSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(upSwipe:)];
+    upSwipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+    
+    [self.view addGestureRecognizer:downSwipeGestureRecognizer];
+    [self.view addGestureRecognizer:upSwipeGestureRecognizer];
+    
+    
+}
+
+
+-(void) upSwipe: (UIGestureRecognizer *) recognizer{
+    [UIView animateWithDuration:1.0 animations:^{ newView.frame = CGRectMake((screenWidth/2)-125, (screenHeight/2)-200, 250, 250); }];
+    
+}
+
+-(void) downSwipe: (UIGestureRecognizer *) recognizer{
+    [UIView animateWithDuration:1.0 animations:^{ newView.frame = CGRectMake((screenWidth/2)-125, (screenHeight/2)+100, 250, 250); }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
